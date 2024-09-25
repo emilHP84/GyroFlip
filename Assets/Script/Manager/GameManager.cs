@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static bool InGame = false;
+    public static GameManager gameManagerInstance;
+
+    public static bool InGame = true;
     public static bool IsDead = false;
+
+    public GameObject targetedtEntity;
 
     private float timer;
 
@@ -13,10 +17,16 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    public void Awake()
+    {
+        gameManagerInstance = this;
+    }
     public void Start()
     {
         
     }
+
     public void Update()
     {
 
