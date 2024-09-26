@@ -5,11 +5,11 @@ using UnityEngine.AI;
 
 public class EnnemiManager : MonoBehaviour
 {
-    private NavMeshAgent entity;
+    
 
     private void Awake()
     {
-        entity = GetComponent<NavMeshAgent>();
+        
     }
     private void OnEnable()
     {
@@ -17,14 +17,11 @@ public class EnnemiManager : MonoBehaviour
     }
     private void Start()
     {
-        if (GameManager.InGame && entity != null)
-        {
-            entity.destination = GameManager.gameManagerInstance.targetedtEntity.transform.localPosition;
-        }
+        
     }
     private void Update()
     {
-        
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position,GameManager.gameManagerInstance.targetedtEntity.transform.position,10*Time.deltaTime);
     }
     private void OnDisable()
     {

@@ -13,7 +13,8 @@ public class GyroscopeManager : MonoBehaviour
     void Update()
     {
         Debug.Log(Input.gyro.attitude);
-        transform.rotation = Input.gyro.attitude;
+        //transform.rotation = Input.gyro.attitude;
+        gameObject.transform.Rotate(0, -Input.gyro.rotationRateUnbiased.z, 0);
     } 
     
 

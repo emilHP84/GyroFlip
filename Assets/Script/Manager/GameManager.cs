@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
     public delegate void OnFlipDelegate();
     public event OnFlipDelegate OnFlip;
     private void Flip() 
