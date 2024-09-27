@@ -788,6 +788,72 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247537902}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1503733373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1503733375}
+  - component: {fileID: 1503733374}
+  m_Layer: 0
+  m_Name: Test AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1503733374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503733373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd68b4c9fc67d341ba59b58cfce2287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 0}
+  musicClips:
+  - {fileID: 8300000, guid: 0f930625be7368a4d84774ce946fee93, type: 3}
+  - {fileID: 8300000, guid: 7535aa529538ebd408d862a7fe8e3fe4, type: 3}
+  - {fileID: 8300000, guid: 331b6d1f934241a4bb4ffc66d6b56682, type: 3}
+  - {fileID: 8300000, guid: 5329e0a334934694282c9bd14700bf60, type: 3}
+  - {fileID: 8300000, guid: 6793548a0b2c6b04281c7be94a312d9f, type: 3}
+  - {fileID: 8300000, guid: a270c6466e704ab4f988f3a4d7c2241d, type: 3}
+  AlarmeBoucleClip:
+  - {fileID: 8300000, guid: f292fb51e5375294a9712d723755455b, type: 3}
+  AlarmeSimpleClip:
+  - {fileID: 8300000, guid: 5665273c0d84dad47b4a07f088129010, type: 3}
+  AlarmeSwitchClip:
+  - {fileID: 8300000, guid: 13d410122a06da746b87dc28766526c2, type: 3}
+  ClicClip:
+  - {fileID: 8300000, guid: 7a1ec36ad76d7af49bef729931bff46d, type: 3}
+  ExplosionEnnemiClip:
+  - {fileID: 8300000, guid: c3ef3ed52f4d0cc4499f1aee9454dc35, type: 3}
+  ExplosionJoueurClip:
+  - {fileID: 8300000, guid: ae2e3939b0a80d34eba14313966c75d5, type: 3}
+  FlipClip:
+  - {fileID: 8300000, guid: 892d685083a314e49b2300009e2ee453, type: 3}
+--- !u!4 &1503733375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503733373}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6972867, y: -4.128817, z: 1.1928879}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1525139846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,3 +1215,4 @@ SceneRoots:
   - {fileID: 671678293}
   - {fileID: 1601414714}
   - {fileID: 1525139848}
+  - {fileID: 1503733375}
