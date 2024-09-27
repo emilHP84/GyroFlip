@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class FlipManager : MonoBehaviour
 {
+    private bool hasflipped;
     private void OnEnable()
     {
         GameManager.gameManagerInstance.OnFlip += Flip;
     }
     public void Flip()
     {
-        StartCoroutine(Fliping()); //??? sa fonctionne pas ???
+        StartCoroutine(Fliping()); 
     }
     public IEnumerator Fliping()    
     {
-        // animation flip
+        if (!hasflipped) 
+        {
+            hasflipped = true;
+        }
+        else
+        {
+            hasflipped = false;
+        }
         yield return null;
     }
     private void OnDisable()
