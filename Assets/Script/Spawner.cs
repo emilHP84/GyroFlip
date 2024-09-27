@@ -34,6 +34,7 @@ public class Spawner : MonoBehaviour
         for(int i = 0; i < stat.SpawnNumber; i++)
         {
             Instantiate(stat.entity, gameObject.transform.position, gameObject.transform.rotation);
+            
         }
         
     }
