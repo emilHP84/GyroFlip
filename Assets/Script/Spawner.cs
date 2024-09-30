@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.IsDead) return;
+        if (GameManager.InPause == true) return;
         time += Time.deltaTime;
         if(CheckSpawn() == true )
         {
