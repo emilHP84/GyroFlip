@@ -1,43 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GyroscopeManager : MonoBehaviour
 {
-    public Vector3 attitude;
-    public Vector3 localAttitude;
+    public Vector3 rotationSpeed;
+    public float worldRotation;
 
     public float attitudeOffset;
     bool started = false;
     public float minAngle, maxAngle;
+    public float speed = 1f;
 
     void Start()
     {
-       // InvokeRepeating("StartGyro", 1f, 1f);
+        //invoke 1 seconde apres lancement du jeu
         Invoke("StartGyro", 1f);
     }
 
     void StartGyro()
     {
+        //activation gyroscope
         Input.gyro.enabled = true;
-        attitudeOffset = Input.gyro.attitude.eulerAngles.z;//- gameObject.transform.localEulerAngles.y;
+        Input.gyro.updateInterval = 0.01f;
+        //l'attitude offset est égale au gyroscope z
+        attitudeOffset = Input.gyro.attitude.eulerAngles.z;
+
+        //min et max angle = 45(-45) + l'attitude z
         minAngle = -45f + attitudeOffset;
         maxAngle = 45f + attitudeOffset;
+
+        //si le min est supérieur au max, il interchange leur valeur
         if (minAngle>maxAngle)
         {
             float tempMin = minAngle;
             minAngle = maxAngle;
             maxAngle = tempMin;
         }
+
         started = true;
     }
 
     void Update()
     {
+        //ne s'active qu'a la fin de la fonction StartGyro
         if (started == false) return;
-        attitude = Input.gyro.attitude.eulerAngles;
-        localAttitude = attitude - Vector3.forward * attitudeOffset;
 
+        //l'attitude est égale au gyroscope du telephone
+        rotationSpeed = Input.gyro.rotationRateUnbiased;
+
+
+        //apelle de la fonction gyro
         Gyro();
         Debug.Log(Input.gyro.updateInterval);
     } 
@@ -46,8 +60,11 @@ public class GyroscopeManager : MonoBehaviour
 
     void Gyro()
     {
-        localAttitude.z = Mathf.Clamp(localAttitude.z, -45f, 45f);
-        gameObject.transform.localEulerAngles = Vector3.up * localAttitude.z;
-        Debug.Log(Input.gyro.attitude);
+        worldRotation = Mathf.Clamp(worldRotation + rotationSpeed.z * speed, -45f, 45f);
+
+        //l'angle du gameobject est égal a l'axe Y multiplié par l'attitude local z
+        //transform.Rotate()
+        gameObject.transform.localEulerAngles = Vector3.up *worldRotation;
     }
+
 }
