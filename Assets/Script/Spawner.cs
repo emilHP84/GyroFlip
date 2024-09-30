@@ -6,6 +6,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public StatSpawner stat;
+    private GameObject entity => stat.entity;
     private float time;
 
 
@@ -33,7 +34,7 @@ public class Spawner : MonoBehaviour
     {
         for(int i = 0; i < stat.SpawnNumber; i++)
         {
-            Instantiate(stat.entity, gameObject.transform.position, gameObject.transform.rotation);
+            Instantiate(entity, gameObject.transform.position, gameObject.transform.rotation,transform.parent);
             
         }
         
