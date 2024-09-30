@@ -7,6 +7,8 @@ public class CanonManager : MonoBehaviour
     public GameObject bullet;
     public GameObject muzzle;
 
+    float time;
+
     private void OnEnable()
     {
         
@@ -19,14 +21,16 @@ public class CanonManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (GameManager.InPause == true) return;
+        time += Time.deltaTime;
     }
 
     public void Shoot()
     {
-        if (bullet != null)
+        if (bullet != null && time > 0.5)
         {
             Instantiate(bullet,muzzle.transform.position,muzzle.transform.rotation,transform.parent = null);
+            time = 0;
         }
     }
 
