@@ -13,7 +13,8 @@ public class FlipManager : MonoBehaviour
     }
     public void Flip()
     {
-        StartCoroutine(Fliping()); 
+        StartCoroutine(Fliping());
+        GetComponent<FullScreenFlipEffect>().StartFlip();
     }
     public IEnumerator Fliping()    
     {
