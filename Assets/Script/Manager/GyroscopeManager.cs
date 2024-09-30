@@ -34,7 +34,7 @@ public class GyroscopeManager : MonoBehaviour
 
     void Update()
     {
-        if (started== false) return;
+        if (started == false) return;
         attitude = Input.gyro.attitude.eulerAngles;
         localAttitude = attitude - Vector3.forward * attitudeOffset;
 

@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
         if (gameManagerInstance == null)
         {
             gameManagerInstance = this;
-            DontDestroyOnLoad(gameObject); 
         }
         else if (gameManagerInstance != this)
         {
@@ -42,11 +41,11 @@ public class GameManager : MonoBehaviour
     private void Flip() 
     {
         OnFlip?.Invoke();
-        
     }
 
     public void Update()
     {
+        if (InPause || IsDead) return;
         TimerDecrement();
     }   
 
@@ -68,12 +67,12 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Ennemi"))
         {
             IsDead = true;
-            InPause = false;
+            InPause = true;
         }
     }
     public void OnDisable()
