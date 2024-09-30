@@ -6,16 +6,25 @@ using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("transition")]
     public GameObject carre;
+
+    [Header("restart screen")]
     public GameObject panelRestart;
+
+    [Header("restart screen")]
+    public GameObject shootButtonOne;
+    public GameObject shootButtonTwo;
 
     private void Awake()
     {
+        shootButtonOne.SetActive(false);
+        shootButtonTwo.SetActive(true);
         panelRestart.SetActive(false);
     }
     public void Start()
     {
-        
+        GameManager.gameManagerInstance.OnFlip += ShootButton;
     }
 
     private void Update()
@@ -49,5 +58,30 @@ public class UIManager : MonoBehaviour
         carre.transform.DOScaleX(20, 1f);
         carre.transform.DOScaleY(20, 1f);
         carre.transform.DORotate(new Vector3(55.3f,0f,290f), 0.5f, RotateMode.Fast);
+    }
+
+    void ShootButton()
+    {
+        
+        if (shootButtonTwo && shootButtonOne == null) return;
+        
+        if (shootButtonTwo.activeSelf == true)
+        {
+            shootButtonTwo.SetActive(false);
+            shootButtonOne.SetActive(true);
+            return;
+        }
+
+        if (shootButtonOne.activeSelf == true)
+        {
+            shootButtonTwo.SetActive(true);
+            shootButtonOne.SetActive(false);
+            return;
+        }
+    }
+
+    private void OnDisable()
+    {
+        GameManager.gameManagerInstance.OnFlip -= ShootButton;
     }
 }
