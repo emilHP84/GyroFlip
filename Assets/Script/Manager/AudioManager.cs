@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
   public AudioSource musicSource;
 
   public AudioClip[] musicClips;
-  public AudioClip[] AlarmeBoucleClip, AlarmeSimpleClip, AlarmeSwitchClip, ClicClip, ExplosionEnnemiClip, ExplosionJoueurClip, FlipClip;
+  public AudioClip[] AlarmeBoucleClip, AlarmeSimpleClip, AlarmeSwitchClip, ClicClip, ExplosionEnnemiClip, ExplosionJoueurClip, FlipClip, TirClip;
 
   
 
@@ -52,6 +52,8 @@ public class AudioManager : MonoBehaviour
             musicSource.Play();
         }
     }
+
+
 
     public void StopMusic()
 {
