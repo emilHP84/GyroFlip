@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc081931cb91ea47bde27691b000e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stat: {fileID: 11400000, guid: f8eb4a31eb5f5324b8864646e31e3b52, type: 2}
 --- !u!65 &4518567227815547371
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -205,6 +206,10 @@ PrefabInstance:
     - target: {fileID: 481134293375044228, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
       propertyPath: m_Name
       value: Explosion ennemi
+      objectReference: {fileID: 0}
+    - target: {fileID: 481134293375044228, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3614678805003878725, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
       propertyPath: VelocityModule.x.scalar
@@ -495,6 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71c3d7327dff574db7b9f54cc218dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 90
 --- !u!4 &5748125044555258123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d59547d91f666bf41bc2bb00c11a9e2d, type: 3}
