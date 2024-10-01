@@ -10,7 +10,9 @@ public class FlipManager : MonoBehaviour
 
     [Header("position A à B")]
     [SerializeField] private Vector3 flip_origin_Position;
+    [SerializeField] private Vector3 flip_origine_Rotation;
     [SerializeField] private Vector3 flip_Position;
+    [SerializeField] private Vector3 flip_Rotation;
     [SerializeField] private float flipTime;
 
     private bool hasflipped;
@@ -29,14 +31,14 @@ public class FlipManager : MonoBehaviour
         if (!hasflipped) 
         {
             gameObj.transform.DOMove(flip_Position,flipTime);
-            gameObj.DORotate(flip_Position,flipTime);
+            gameObj.DORotate(flip_Rotation,flipTime);
             hasflipped = true;
             GameManager.InPause = false;
         }
         else
         {
             gameObj.transform.DOMove(flip_origin_Position, flipTime);
-            gameObj.DORotate(flip_origin_Position, flipTime);
+            gameObj.DORotate(flip_origine_Rotation, flipTime);
             hasflipped = false;
             GameManager.InPause = false;
         }
