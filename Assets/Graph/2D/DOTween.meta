@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Graph/2D/DOTween.meta
 guid: 90fca08c2eb5bdd4c935b643721799ad
+========
+guid: 02dc94853ad803a4986c5717b3a64f26
+>>>>>>>> 616cb6bfe55821d9501c9be7e3f77eee2199faa6:Assets/Graph/2D/DOTween/Editor.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

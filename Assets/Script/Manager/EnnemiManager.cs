@@ -27,7 +27,7 @@ public class EnnemiManager : MonoBehaviour
 
     private void Move()
     {
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, GameManager.gameManagerInstance.targetedtEntity.transform.position, 10 * Time.deltaTime);
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, GameManager.gameManagerInstance.targetedtEntity.transform.position, 2 * Time.deltaTime);
     }
     private void OnDisable()
     {
