@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     [Header("restart screen")]
     public GameObject panelRestart;
 
-    [Header("restart screen")]
+    [Header("worldSpace UI")]
     public GameObject shootButtonOne;
     public GameObject shootButtonTwo;
 

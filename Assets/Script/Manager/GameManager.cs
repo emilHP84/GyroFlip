@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
     public static bool InPause = false;
     public static bool IsDead = false;
 
-    public GameObject targetedtEntity;
-
     private float timer = 0;
     private float dTime = 8;
 
@@ -65,14 +63,6 @@ public class GameManager : MonoBehaviour
                 timer = 0;
                 Flip();
             }
-        }
-    }
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Ennemi"))
-        {
-            IsDead = true;
-            InPause = true;
         }
     }
     public void OnDisable()

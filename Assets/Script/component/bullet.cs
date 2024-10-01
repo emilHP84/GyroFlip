@@ -14,7 +14,10 @@ public class bullet : MonoBehaviour
 
     //time between death
     private float time;
-
+    private void OnEnable()
+    {
+        gameObject.transform.parent = null;
+    }
     public void Update()
     {
         time += Time.deltaTime;
@@ -47,7 +50,6 @@ public class bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ennemi"))
         {
-            Debug.Log("heavy is dead!");
             hasHit = true;
             Destroy(other.gameObject);
         }

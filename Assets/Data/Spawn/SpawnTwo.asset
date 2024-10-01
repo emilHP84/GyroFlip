@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13247fe728e34724aaed5f1780c8e06f, type: 3}
   m_Name: SpawnTwo
   m_EditorClassIdentifier: 
-  entity: {fileID: 3649477485803480025, guid: 7e2e4adbef970e74aa7473bdb1ba5f33, type: 3}
-  SpawnNumber: 3
-  timeSpeed: 1.5
+  entity: {fileID: 2599532575407330685, guid: 7f02ebac646d69943a37b0c47f5655e0, type: 3}
+  SpawnNumber: 2
+  distanceSpawn: 5
+  timeSpeed: 1.8

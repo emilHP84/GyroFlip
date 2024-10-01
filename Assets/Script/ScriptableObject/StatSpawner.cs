@@ -9,5 +9,6 @@ public class StatSpawner : ScriptableObject
 {
     public GameObject entity;
     [Range(0,5)]public int SpawnNumber;
+    public float distanceSpawn;
     public float timeSpeed;
 }

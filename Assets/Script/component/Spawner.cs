@@ -34,8 +34,8 @@ public class Spawner : MonoBehaviour
     {
         for(int i = 0; i < stat.SpawnNumber; i++)
         {
-            Instantiate(entity, gameObject.transform.position, gameObject.transform.rotation,transform.parent);
-            
+            float distance = Random.Range(-stat.distanceSpawn,stat.distanceSpawn);
+            Instantiate(entity, gameObject.transform.position + new Vector3(distance, 0, distance), gameObject.transform.rotation,transform.parent);
         }
         
     }
