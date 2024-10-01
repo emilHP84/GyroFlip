@@ -11,20 +11,20 @@ public class AudioManager : MonoBehaviour
   public AudioClip[] musicClips;
   public AudioClip[] AlarmeBoucleClip, AlarmeSimpleClip, AlarmeSwitchClip, ClicClip, ExplosionEnnemiClip, ExplosionJoueurClip, FlipClip;
 
-  private Dictionary<string, AudioClip> musicDict;
+  
 
 
     void Start()
     {
-        AudioManager.instance.PlayMusic("Menu"); 
+        PlayMusic();
     }
+
 
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -32,20 +32,30 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayMusic(string clipName)
+    public void PlayMusic()
     {
-        if (musicDict.ContainsKey(clipName))
+        if(GameManager.InGame == false)
         {
-            musicSource.clip = musicDict[clipName];
+            musicSource.clip = musicClips[0];
+            musicSource.Play();
+        }
+
+        if(GameManager.InGame == true)
+        {
+            musicSource.clip = musicClips[1];
+            musicSource.Play();
+        }
+
+        if(GameManager.InGame == true && GameManager.IsDead == true)
+        {
+            musicSource.clip = musicClips[2];
             musicSource.Play();
         }
     }
 
-
-public void StopMusic()
+    public void StopMusic()
 {
     musicSource.Stop();
 }
-   
-  
+
 }
