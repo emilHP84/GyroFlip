@@ -1,6 +1,11 @@
 fileFormatVersion: 2
-guid: 7b72e03d55c104d458ea2bf16c3dfc72
+<<<<<<<< HEAD:Assets/Graph/VFX/Death_ennemi_2/MTL_ray-full-white.mat.meta
+guid: a86b07b2dfbab84489d3620ddaed2a4b
+NativeFormatImporter:
+========
+guid: ced94a2411b70a64b8349b4f29f92eb6
 PrefabImporter:
+>>>>>>>> origin/UI:Assets/_marius/PFB_ennemy-explode-FX.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
