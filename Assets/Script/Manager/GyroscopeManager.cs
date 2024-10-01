@@ -53,7 +53,6 @@ public class GyroscopeManager : MonoBehaviour
 
         //apelle de la fonction gyro
         Gyro();
-        Debug.Log(Input.gyro.updateInterval);
     } 
     
 

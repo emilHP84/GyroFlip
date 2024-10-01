@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13247fe728e34724aaed5f1780c8e06f, type: 3}
-  m_Name: SpawnThree
+  m_Script: {fileID: 11500000, guid: d34d849c21fbc3d47b2ed2ae8443540d, type: 3}
+  m_Name: basic_Ennemi
   m_EditorClassIdentifier: 
-  entity: {fileID: 2599532575407330685, guid: 7f02ebac646d69943a37b0c47f5655e0, type: 3}
-  SpawnNumber: 3
-  timeSpeed: 2.3
+  target: {fileID: 0}
+  speed: 0

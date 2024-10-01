@@ -5,15 +5,14 @@ using UnityEngine.AI;
 
 public class EnnemiManager : MonoBehaviour
 {
-    
+    [SerializeField] private StatEnnemi stat;
+    private void OnEnable()
+    {
 
+    }
     private void Awake()
     {
         
-    }
-    private void OnEnable()
-    {
-    
     }
     private void Start()
     {
@@ -27,7 +26,7 @@ public class EnnemiManager : MonoBehaviour
 
     private void Move()
     {
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, GameManager.gameManagerInstance.targetedtEntity.transform.position, 2 * Time.deltaTime);
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position,stat.target.transform.position, 2 * Time.deltaTime);
     }
     private void OnDisable()
     {

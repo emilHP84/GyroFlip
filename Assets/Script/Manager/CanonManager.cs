@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CanonManager : MonoBehaviour
 {
-    public GameObject bullet;
-    public GameObject muzzle;
+    [SerializeField]private GameObject bullet;
+    [SerializeField]private GameObject muzzle;
 
     float time;
 

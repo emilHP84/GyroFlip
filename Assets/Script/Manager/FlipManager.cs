@@ -5,8 +5,16 @@ using DG.Tweening;
 
 public class FlipManager : MonoBehaviour
 {
-    public Transform camera;
+    [Header("objet à  flip")]
+    [SerializeField] private Transform gameObj;
+
+    [Header("position A à B")]
+    [SerializeField] private Vector3 flip_origin_Position;
+    [SerializeField] private Vector3 flip_Position;
+    [SerializeField] private float flipTime;
+
     private bool hasflipped;
+
     private void OnEnable()
     {
         GameManager.gameManagerInstance.OnFlip += Flip;
@@ -20,15 +28,15 @@ public class FlipManager : MonoBehaviour
     {
         if (!hasflipped) 
         {
-            camera.transform.DOMove(new Vector3(0, -32.3f, -28.7f), 1);
-            camera.DORotate(new Vector3(-55.3f, 0, 0), 1);
+            gameObj.transform.DOMove(flip_Position,flipTime);
+            gameObj.DORotate(flip_Position,flipTime);
             hasflipped = true;
             GameManager.InPause = false;
         }
         else
         {
-            camera.transform.DOMove(new Vector3(0, 32.3f, -28.7f), 1);
-            camera.DORotate(new Vector3(55.3f, 0, 0), 1);
+            gameObj.transform.DOMove(flip_origin_Position, flipTime);
+            gameObj.DORotate(flip_origin_Position, flipTime);
             hasflipped = false;
             GameManager.InPause = false;
         }
