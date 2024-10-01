@@ -322,6 +322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tirx2_V2
       objectReference: {fileID: 0}
+    - target: {fileID: 1541998606474349963, guid: e9b82611279d5d44dad5023270df990b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 965bba60f0ea47f4ea3797540fdff25a, type: 2}
     - target: {fileID: 5856315120976314401, guid: e9b82611279d5d44dad5023270df990b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
