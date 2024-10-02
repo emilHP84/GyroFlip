@@ -10,7 +10,7 @@ public class bullet : MonoBehaviour
     private int hitCount = 0;
 
     //move of bullet 
-    private float speed = 10;
+    private float speed = 25;
 
     //time between death
     private float time;
@@ -51,7 +51,6 @@ public class bullet : MonoBehaviour
         if (other.gameObject.CompareTag("Ennemi"))
         {
             hasHit = true;
-            Destroy(other.gameObject);
         }
     }
 }
