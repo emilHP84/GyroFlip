@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-  public static AudioManager instance;
+    public static AudioManager instance;
 
-  public AudioSource musicSource;
+    public AudioSource musicSource;
 
-  public AudioClip[] musicClips;
-  public AudioClip[] AlarmeBoucleClip, AlarmeSimpleClip, AlarmeSwitchClip, ClicClip, ExplosionEnnemiClip, ExplosionJoueurClip, FlipClip, TirClip;
+    public AudioClip[] musicClips;
+    public AudioClip[] AlarmeBoucleClip, AlarmeSimpleClip, AlarmeSwitchClip;
 
-  
 
+    private void OnEnable()
+    {
+       
+    }
 
     void Start()
     {
@@ -53,11 +56,29 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void AlarmLoop() 
+    {
+        //
+    }
 
+    public void AlarmSimple()
+    {
+        // à oublier pour le moment
+    }
+
+    public void ExplosionEnnemi()
+    {
+        //
+    }
 
     public void StopMusic()
-{
-    musicSource.Stop();
+    {
+        musicSource.Stop();
+    }
+
+    private void OnDisable()
+    {
+        
+    }
 }
 
-}

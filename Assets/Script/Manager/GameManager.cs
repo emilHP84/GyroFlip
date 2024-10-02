@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     private float timer = 0;
     private float dTime = 8;
+    private bool PreFlipIsActive = false;
+
+    [SerializeField] private AudioSource SFXSource;
 
     public void OnEnable()
     {
@@ -45,6 +48,16 @@ public class GameManager : MonoBehaviour
     {
         if (InPause || IsDead) return;
         TimerDecrement();
+
+        if (timer > dTime -2)
+        {
+            if(PreFlipIsActive == false)
+            {
+                PreFlipSFX();
+                PreFlipIsActive = true;
+            }
+                
+        }
     }   
 
     private void TimerDecrement()
@@ -57,14 +70,22 @@ public class GameManager : MonoBehaviour
                 timer = 0;
                 dTime -= 0.2f;
                 Flip();
+                PreFlipIsActive = false;
             }
             else
             {
                 timer = 0;
                 Flip();
+                PreFlipIsActive = false;
             }
         }
     }
+
+    public void PreFlipSFX()
+    {
+       SFXSource.Play();
+    }
+
     public void OnDisable()
     {
 

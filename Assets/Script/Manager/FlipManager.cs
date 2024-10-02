@@ -15,6 +15,8 @@ public class FlipManager : MonoBehaviour
     [SerializeField] private Vector3 flip_Rotation;
     [SerializeField] private float flipTime;
 
+    [SerializeField] private AudioSource SFXSource;
+
     private bool hasflipped;
 
     private void OnEnable()
@@ -42,8 +44,15 @@ public class FlipManager : MonoBehaviour
             hasflipped = false;
             GameManager.InPause = false;
         }
+        FlipSFX();
         yield return null;
     }
+
+    public void FlipSFX()
+    {
+        SFXSource.Play();
+    }
+
     private void OnDisable()
     {
         GameManager.gameManagerInstance.OnFlip -= Flip;

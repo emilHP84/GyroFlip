@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d34d849c21fbc3d47b2ed2ae8443540d, type: 3}
   m_Name: basic_Ennemi
   m_EditorClassIdentifier: 
-  target: {fileID: 4382024936907892810, guid: c9fc85599ae9eeb42a577956d7729591, type: 3}
+  target: {fileID: 0}
   speed: 5
