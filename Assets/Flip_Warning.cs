@@ -5,26 +5,32 @@ using DG.Tweening;
 
 public class Flip_Warning : MonoBehaviour
 {
-    public GameObject Up_right;
-    public GameObject Up_left;
-    public GameObject Down_right;
-    public GameObject Down_left;
+    public GameObject carre;
 
     void Start()
     {
-        
+        movimiento();
     }
 
     
     void Update()
     {
-        movimiento();
+        
     }
 
     void movimiento()
     {
-        Down_left.transform.DOScaleY(1.3f, 0.1f).SetLoops(2,LoopType.Yoyo);
-        Down_left.transform.DOScaleY(-1.3f, -0.1f).SetLoops(2,LoopType.Yoyo);
+        carre.transform.DOScale(1f, 0.1f).SetLoops(2,LoopType.Yoyo)
+        .SetDelay(.5f)
+        .SetEase(Ease.OutElastic).OnComplete(()=>{
+            
+            movimiento();
+        });
         
+    }
+    
+    void balle()
+    {
+        carre.transform.DOScale(4, 0.1f).SetLoops(2,LoopType.Yoyo);
     }
 }

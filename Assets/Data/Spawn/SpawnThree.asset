@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SpawnThree
   m_EditorClassIdentifier: 
   entity: {fileID: 2599532575407330685, guid: 7f02ebac646d69943a37b0c47f5655e0, type: 3}
-  SpawnNumber: 3
-  distanceSpawn: 5
-  timeSpeed: 2.3
+  SpawnNumber: 1
+  distanceSpawn: 6.09
+  timeSpeed: 2
