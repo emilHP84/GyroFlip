@@ -16,8 +16,6 @@ public class UIManager : MonoBehaviour
     public GameObject shootButtonOne;
     public GameObject shootButtonTwo;
 
-    [SerializeField] private AudioSource SFXSource;
-
     private void Awake()
     {
         shootButtonOne.SetActive(false);
@@ -80,11 +78,6 @@ public class UIManager : MonoBehaviour
             shootButtonOne.SetActive(false);
             return;
         }
-    }
-
-    public void ButtonSFX()
-    {
-        SFXSource.Play();
     }
 
     private void OnDisable()

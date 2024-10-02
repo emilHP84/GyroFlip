@@ -6,7 +6,6 @@ public class CanonManager : MonoBehaviour
 {
     [SerializeField]private GameObject bullet;
     [SerializeField]private GameObject muzzle;
-    [SerializeField] private AudioSource SFXSource;
 
     float time;
 
@@ -32,14 +31,7 @@ public class CanonManager : MonoBehaviour
         {
             Instantiate(bullet,muzzle.transform.position,muzzle.transform.rotation,transform.parent = null);
             time = 0;
-            ShootSFX();
-
         }
-    }
-
-    public void ShootSFX()
-    {
-        SFXSource.Play();
     }
 
     private void OnDisable()
