@@ -10,7 +10,7 @@ public class Flip_Warning : MonoBehaviour
 
     void Start()
     {
-        Mouvement();
+        carre.SetActive(false);
     }
 
     
@@ -19,14 +19,16 @@ public class Flip_Warning : MonoBehaviour
         
     }
 
-    void Mouvement()
+    public void Mouvement()
     {
         if (flip == true )
         {
             FlipAnim();
-            carre.transform.DOScale( 0, 0.3f );
+            carre.transform.DOScale( 4, 0.3f );
+            carre.SetActive(false);
             return;
         }
+        carre.SetActive(true);
         carre.transform.DOScale(1f, 0.1f).SetLoops(2,LoopType.Yoyo);
         carre.transform.DOScale(4, 0.1f).SetLoops(2,LoopType.Yoyo)
         .SetDelay(.5f)
@@ -37,7 +39,7 @@ public class Flip_Warning : MonoBehaviour
         
     }
 
-    void FlipAnim()
+    public void FlipAnim()
     {
         carre.transform.DOScale(1000, 0.2f);
         flip = false;

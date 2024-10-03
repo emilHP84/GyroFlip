@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManagerInstance;
 
+    public Flip_Warning flip_Warning;
+
     public static bool InGame = true;
     public static bool InPause = false;
     public static bool IsDead = false;
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
             if(PreFlipIsActive == false)
             {
                 PreFlipSFX();
+                flip_Warning.Mouvement();
                 PreFlipIsActive = true;
             }
                 
@@ -70,12 +73,16 @@ public class GameManager : MonoBehaviour
                 timer = 0;
                 dTime -= 0.2f;
                 Flip();
+                flip_Warning.flip=true;
+
                 PreFlipIsActive = false;
             }
             else
             {
                 timer = 0;
                 Flip();
+                flip_Warning.flip=true;
+
                 PreFlipIsActive = false;
             }
         }
