@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManagerInstance;
 
-    public Flip_Warning flip_Warning;
+    //public Flip_Warning flip_Warning;
 
     public static bool InGame = true;
     public static bool InPause = false;
@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private float dTime = 8;
     private bool PreFlipIsActive = false;
 
+    [SerializeField] public GameObject gyro;
     [SerializeField] private AudioSource SFXSource;
 
     public void OnEnable()
@@ -56,7 +57,7 @@ public class GameManager : MonoBehaviour
             if(PreFlipIsActive == false)
             {
                 PreFlipSFX();
-                flip_Warning.Mouvement();
+                //flip_Warning.Mouvement();
                 PreFlipIsActive = true;
             }
                 
@@ -73,7 +74,7 @@ public class GameManager : MonoBehaviour
                 timer = 0;
                 dTime -= 0.2f;
                 Flip();
-                flip_Warning.flip=true;
+                //flip_Warning.flip=true;
 
                 PreFlipIsActive = false;
             }
@@ -81,7 +82,7 @@ public class GameManager : MonoBehaviour
             {
                 timer = 0;
                 Flip();
-                flip_Warning.flip=true;
+                //flip_Warning.flip=true;
 
                 PreFlipIsActive = false;
             }

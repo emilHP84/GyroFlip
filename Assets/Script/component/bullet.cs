@@ -16,8 +16,9 @@ public class bullet : MonoBehaviour
     private float time;
     private void OnEnable()
     {
-        gameObject.transform.parent = null;
+
     }
+
     public void Update()
     {
         time += Time.deltaTime;
@@ -36,13 +37,13 @@ public class bullet : MonoBehaviour
 
     private void move()
     {
-        gameObject.transform.position += new Vector3(0, 0, 1) * speed * Time.deltaTime;
+        gameObject.transform.position += transform.forward * speed * Time.deltaTime;
     }
 
     
     private void Death()
     {
-        Destroy(gameObject);
+        PoolingManager.instance.SendBackFromPool("BulletPool", gameObject);
     }
 
 

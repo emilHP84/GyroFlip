@@ -58,12 +58,13 @@ public class EnnemiManager : MonoBehaviour
     IEnumerator Dead()
     {
         deathOne.SetActive(true);
-        gameObject.transform.DOShakeScale(1, 1, 10, 90, true, ShakeRandomnessMode.Full);
-        yield return new WaitForSeconds(1f);
         deathTwo.SetActive(true);
         gameObject.transform.DOScale(0, 0.5f);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject,0.5f);
+        PoolingManager.instance.SendBackFromPool("EnnemiPool", gameObject);
         yield return null;
+        
     }
 }
  

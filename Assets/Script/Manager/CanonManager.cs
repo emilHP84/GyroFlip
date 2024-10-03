@@ -6,6 +6,7 @@ public class CanonManager : MonoBehaviour
 {
     [SerializeField]private GameObject bullet;
     [SerializeField]private GameObject muzzle;
+    [SerializeField] private GameObject Gyro;
     [SerializeField] private AudioSource SFXSource;
 
     float time;
@@ -30,7 +31,7 @@ public class CanonManager : MonoBehaviour
     {
         if (bullet != null && time > 0.5)
         {
-            Instantiate(bullet,muzzle.transform.position,muzzle.transform.rotation,transform.parent = null);
+            PoolingManager.instance.SpawnFromPool("BulletPool", muzzle.transform.position, muzzle.transform.rotation, GameManager.gameManagerInstance.gyro.transform) ;
             time = 0;
             ShootSFX();
 
