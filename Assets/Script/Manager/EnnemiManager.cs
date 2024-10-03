@@ -15,7 +15,8 @@ public class EnnemiManager : MonoBehaviour
    private bool isDead;
     private void OnEnable()
     {
-
+        deathOne.SetActive(false);
+        deathTwo.SetActive(false);
     }
     private void Awake()
     {
@@ -58,7 +59,7 @@ public class EnnemiManager : MonoBehaviour
     {
         deathOne.SetActive(true);
         gameObject.transform.DOShakeScale(1, 1, 10, 90, true, ShakeRandomnessMode.Full);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         deathTwo.SetActive(true);
         gameObject.transform.DOScale(0, 0.5f);
         Destroy(gameObject,0.5f);
