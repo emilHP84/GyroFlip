@@ -42,7 +42,7 @@ public class bullet : MonoBehaviour
     
     private void Death()
     {
-        Destroy(gameObject);
+        PoolingManager.instance.SendBackFromPool("BulletPool", gameObject);
     }
 
 
