@@ -309,6 +309,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 481134293375044228, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614678805003878725, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
+      propertyPath: playOnAwake
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3614678805003878725, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
@@ -324,6 +328,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3744541356809606712, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744541356809606712, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
       propertyPath: VelocityModule.x.scalar
       value: 10
       objectReference: {fileID: 0}
@@ -336,8 +344,16 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6134763081913390607, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134763081913390607, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454789271646893474, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
+      propertyPath: playOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6454789271646893474, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -387,6 +403,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7792019635061835500, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906427289825896003, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7906427289825896003, guid: 320e7335e7d26544e8f41c5120bafa9e, type: 3}
       propertyPath: VelocityModule.x.scalar
       value: 10
@@ -423,6 +447,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 6861498866291990649}
     m_Modifications:
     - target: {fileID: 1439803401411924178, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439803401411924178, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 4
       objectReference: {fileID: 0}
@@ -435,8 +463,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2405241560155459268, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405241560155459268, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886037913829605324, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
+      propertyPath: playOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4886037913829605324, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -445,6 +481,14 @@ PrefabInstance:
     - target: {fileID: 4886037913829605324, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
       propertyPath: InitialModule.startSize.minScalar
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291410398196073688, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348411513330365320, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
+      propertyPath: playOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5348411513330365320, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -489,6 +533,10 @@ PrefabInstance:
     - target: {fileID: 5752155814831953083, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7610774929170411976, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
+      propertyPath: playOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7610774929170411976, guid: 5a37a48a6fec3cf408b928c3c2e3cedd, type: 3}
       propertyPath: InitialModule.startSize.scalar
