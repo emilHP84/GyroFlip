@@ -31,7 +31,7 @@ public class CanonManager : MonoBehaviour
     {
         if (bullet != null && time > 0.5)
         {
-            PoolingManager.instance.SpawnFromPool("BulletPool", muzzle.transform.position, muzzle.transform.rotation, transform.parent);
+            PoolingManager.instance.SpawnFromPool("BulletPool", muzzle.transform.position, muzzle.transform.rotation, GameManager.gameManagerInstance.gyro.transform) ;
             time = 0;
             ShootSFX();
 

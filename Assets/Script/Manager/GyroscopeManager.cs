@@ -6,7 +6,7 @@ using UnityEngine;
 public class GyroscopeManager : MonoBehaviour
 {
     public Vector3 rotationSpeed;
-    public float worldRotation;
+    public static float worldRotation;
 
     public float attitudeOffset;
     bool started = false;
