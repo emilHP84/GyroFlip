@@ -41,7 +41,7 @@ public class UIManager : MonoBehaviour
     }
     public void Play()
     {
-        if ( shootButtonOne == null || shootButtonTwo == null || panelRestart == null) return;
+        
         panelRestart.transform.DOScale(new Vector3(0, 0, 0), 1f);
         StartCoroutine(ChangeScene());
     }
