@@ -34,7 +34,7 @@ public class EnnemiManager : MonoBehaviour
 
     private void Move()
     {
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position,Target.pos.position, 4f * Time.deltaTime);
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position,Target.pos.position, stat.speed * Time.deltaTime);
     }
     private void OnCollisionEnter(Collision collision)
     {

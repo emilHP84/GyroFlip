@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: basic_Ennemi
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 5
+  speed: 4
