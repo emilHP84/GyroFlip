@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnEnable()
     {
-       
+
     }
 
     void Start()
@@ -35,9 +35,14 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        PlayMusic();
+    }
+
     public void PlayMusic()
     {
-        if(GameManager.InGame == false)
+        if (GameManager.InGame == false)
         {
             musicSource.clip = musicClips[0];
             musicSource.Play();
@@ -46,14 +51,24 @@ public class AudioManager : MonoBehaviour
         if(GameManager.InGame == true)
         {
             musicSource.clip = musicClips[1];
-            musicSource.Play();
+            if (!musicSource.isPlaying) {
+                musicSource.Play();
+            }
         }
 
-        if(GameManager.InGame == true && GameManager.IsDead == true)
+        /*if(GameManager.InGame == true && GameManager.IsDead == true)
         {
+            if(musicSource.isPlaying && musicSource.clip == musicClips[1])
+            {
+                musicSource.clip = musicClips[2];
+                musicSource.Play();
+            }
             musicSource.clip = musicClips[2];
-            musicSource.Play();
-        }
+
+            if (!musicSource.isPlaying) {
+                musicSource.Play();
+            }
+        }*/
     }
 
     public void AlarmLoop() 

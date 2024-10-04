@@ -7,7 +7,7 @@ public class EnnemiManager : MonoBehaviour
 {
     [SerializeField] private StatEnnemi stat;
     private BoxCollider box => GetComponent<BoxCollider>();
-    [SerializeField] private AudioSource SFXSource => GetComponent<AudioSource>();
+    [SerializeField] private AudioSource SFXSource;
 
     [SerializeField] private GameObject deathOne;
     [SerializeField] private GameObject deathTwo;
@@ -46,13 +46,13 @@ public class EnnemiManager : MonoBehaviour
     {
         box.isTrigger = true;
         isDead = true;
+        DeathSFX();
         StartCoroutine(Dead());
     }
 
     public void DeathSFX()
     {
         SFXSource.Play();
-        DeathSFX();
     }
 
     IEnumerator Dead()
