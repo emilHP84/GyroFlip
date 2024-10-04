@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stat: {fileID: 11400000, guid: f8eb4a31eb5f5324b8864646e31e3b52, type: 2}
+  SFXSource: {fileID: 3599590860290858781}
   deathOne: {fileID: 1816470031851930426}
   deathTwo: {fileID: 2849845661519957502}
 --- !u!65 &4518567227815547371

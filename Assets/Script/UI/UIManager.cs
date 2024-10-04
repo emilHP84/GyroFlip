@@ -40,8 +40,7 @@ public class UIManager : MonoBehaviour
         }
     }
     public void Play()
-    {
-        
+    { 
         panelRestart.transform.DOScale(new Vector3(0, 0, 0), 1f);
         StartCoroutine(ChangeScene());
     }
@@ -98,7 +97,7 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         GameManager.InPause = false;
         GameManager.IsDead = false;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         yield return null;
     }
 

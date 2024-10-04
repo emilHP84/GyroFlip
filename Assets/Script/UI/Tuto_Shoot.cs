@@ -14,7 +14,7 @@ public class Tuto_Shoot : MonoBehaviour
 
     void Grossi()
     {
-        transform.DOScale(1.5f, 1.5f);
+        transform.DOScale(1.2f, 1.5f);
         Invoke("Retreci",1);
     }
 
