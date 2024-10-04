@@ -7,7 +7,7 @@ public class TutoManager : MonoBehaviour
 {
     void Start()
     {
-        ChangeScene();
+        StartCoroutine(ChangeScene());
     }
 
     IEnumerator ChangeScene()
