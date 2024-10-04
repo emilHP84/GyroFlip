@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
+        if (shootButtonOne == null || shootButtonTwo == null || panelRestart == null)return;
         shootButtonOne.SetActive(false);
         shootButtonTwo.SetActive(true);
         panelRestart.SetActive(false);
@@ -27,6 +28,8 @@ public class UIManager : MonoBehaviour
     public void Start()
     {
         GameManager.gameManagerInstance.OnFlip += ShootButton;
+        if (shootButtonOne == null || shootButtonTwo == null || panelRestart == null) return;
+        panelRestart.transform.DOScale(new Vector3(0, 0, 0), 0f);
     }
 
     private void Update()
@@ -38,9 +41,9 @@ public class UIManager : MonoBehaviour
     }
     public void Play()
     {
-        GameManager.InPause = false;
-        GameManager.IsDead = false;
-        SceneManager.LoadScene(1);
+        if ( shootButtonOne == null || shootButtonTwo == null || panelRestart == null) return;
+        panelRestart.transform.DOScale(new Vector3(0, 0, 0), 1f);
+        StartCoroutine(ChangeScene());
     }
 
     public void Quit()
@@ -52,6 +55,8 @@ public class UIManager : MonoBehaviour
     {
         if (panelRestart == null) return;
         panelRestart.SetActive(true);
+        
+        panelRestart.transform.DOScale(new Vector3(1, 1, 1), 1f);
         GameManager.InPause = true;
     }
     void ScreenMove()
@@ -64,7 +69,7 @@ public class UIManager : MonoBehaviour
 
     void ShootButton()
     {
-        
+        if (shootButtonOne == null || shootButtonTwo == null || panelRestart == null) return;
         if (shootButtonTwo && shootButtonOne == null) return;
         
         if (shootButtonTwo.activeSelf == true)
@@ -85,6 +90,16 @@ public class UIManager : MonoBehaviour
     public void ButtonSFX()
     {
         SFXSource.Play();
+    }
+
+    IEnumerator ChangeScene()
+    {
+        ScreenMove();
+        yield return new WaitForSeconds(1);
+        GameManager.InPause = false;
+        GameManager.IsDead = false;
+        SceneManager.LoadScene(1);
+        yield return null;
     }
 
     private void OnDisable()
