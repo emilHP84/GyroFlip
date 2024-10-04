@@ -242,7 +242,7 @@ MonoBehaviour:
   musicSource: {fileID: 889016743}
   musicClips:
   - {fileID: 8300000, guid: 0f930625be7368a4d84774ce946fee93, type: 3}
-  - {fileID: 8300000, guid: 7535aa529538ebd408d862a7fe8e3fe4, type: 3}
+  - {fileID: 8300000, guid: bab627574afcb1e488870c3cb807dbf5, type: 3}
   - {fileID: 8300000, guid: a270c6466e704ab4f988f3a4d7c2241d, type: 3}
   AlarmeBoucleClip:
   - {fileID: 8300000, guid: f292fb51e5375294a9712d723755455b, type: 3}
@@ -3417,7 +3417,7 @@ MonoBehaviour:
   attitudeOffset: 0
   minAngle: 0
   maxAngle: 0
-  speed: 2
+  speed: 1.5
 --- !u!1 &1567137378
 GameObject:
   m_ObjectHideFlags: 0
